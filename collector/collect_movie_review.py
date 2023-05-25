@@ -71,7 +71,7 @@ for i, review_box in enumerate(review_list):
     writer = review_box.select("a.link_nick > span")[1].text
     review_date = review_box.select("span.txt_date")[0].text
 
-    print(f"={i+1}=============================")
+    print(f"={i+1}==============================")
     print(f"- 리뷰: {review}")
     print(f"- 평점: {score}")
     print(f"- 작성자: {writer}")
