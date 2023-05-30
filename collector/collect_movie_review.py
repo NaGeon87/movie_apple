@@ -1,3 +1,4 @@
+from db.movie_crud import add_review
 import math
 import re
 import time
@@ -76,6 +77,19 @@ for i, review_box in enumerate(review_list):
     print(f"- 평점: {score}")
     print(f"- 작성자: {writer}")
     print(f"- 일자: {review_date}")
+
+    data = {
+        "title": title,
+        "review": review,
+        "score": score,
+        "writer": writer,
+        "regdate": review_date
+    }
+    add_review(data)
+# MongoDB 저장
+# JSON type(Dict) 전달
+
+
 
 # Report
 print("#" * 30)
